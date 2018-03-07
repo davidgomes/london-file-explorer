@@ -15,11 +15,19 @@ class FileList extends React.Component<{}> {
     mutate({ variables: { path: path.join(currentPath, pathExtension) } });
   };
 
+  handleGoBack = () => {
+    const { mutate, previousPath } = this.props;
+
+    mutate({ variables: { path: previousPath } });
+  };
+
   render() {
     const { data: { files }, path } = this.props;
 
     return (
       <div>
+        <div onClick={this.handleGoBack}>Go Back</div>
+
         <b>Files in {path}</b>:
 
         {_.map(files, file => (

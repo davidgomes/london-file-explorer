@@ -12,10 +12,10 @@ import FileList from "./file-list";
 
 class FileExplorer extends React.Component<{}> {
   render() {
-    const { currentPath } = this.props.data;
+    const { currentPath, previousPath } = this.props.data;
 
     return (
-      <FileList path={currentPath} />
+      <FileList path={currentPath} previousPath={previousPath} />
     );
   }
 }
@@ -23,7 +23,8 @@ class FileExplorer extends React.Component<{}> {
 export default compose(
   graphql(gql`
     query GetPath {
-      currentPath
+      currentPath @client
+      previousPath @client
     }
   `)
 )(FileExplorer);

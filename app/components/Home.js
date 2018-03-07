@@ -36,14 +36,23 @@ const stateLink = withClientState({
 
     Mutation: {
       changePath: (_, { path }, { cache }) => {
-        console.log("inside the mutation", path);
-        cache.writeData({ data: { currentPath: path } });
+        const { currentPath } = cache.readQuery({
+          query: gql`
+            query GetPath {
+              currentPath @client
+            }
+          `,
+        });
+
+        cache.writeData({ data: { currentPath: path, previousPath: currentPath } });
         return null;
       },
     },
   },
+
   defaults: {
     currentPath: "/Users/davidgomes/",
+    previousPath: null,
   },
 })
 
