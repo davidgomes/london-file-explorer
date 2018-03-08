@@ -1,5 +1,3 @@
-// @flow
-
 import * as React from "react";
 import _ from "lodash";
 import path from "path";
@@ -7,6 +5,8 @@ import path from "path";
 import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
 import { compose } from 'react-apollo';
+
+import "./file-list.scss";
 
 class FileList extends React.Component<{}> {
   handleFileClick = (pathExtension: string) => {
