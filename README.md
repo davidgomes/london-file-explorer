@@ -2,7 +2,7 @@
 
 #### Disclaimer
 
-This is just an experiment with Apollo, GraphQL, React and Electron. **I should not be using apollo-link-state for this**.
+This is just an experiment with Apollo, GraphQL, React and Electron. **I should not be using [apollo-link-state](https://github.com/apollographql/apollo-link-state/) for this**. A better idea would probably be [apollo-link-electron](https://github.com/firede/apollo-link-electron).
 
 ## About
 
