@@ -1,12 +1,12 @@
 # London File Explorer
 
-## Disclaimer
+#### Disclaimer
 
-This is just an experiment with Apollo, GraphQL, React and Electron. *I should not be using apollo-link-state for this*.
+This is just an experiment with Apollo, GraphQL, React and Electron. **I should not be using apollo-link-state for this**.
 
-## London File Explorer
+## About
 
-For fun, I decided to build a file explorer 
+For fun, I decided to build a file explorer with JavaScript using Electron, Apollo/GraphQL and React. The idea is that I have a GraphQL server running inside my application that resolves to the file system API. I built this as part of my talk at [React Fest](http://reactfest.uk) 2018 about GraphQL Servers running on the client.
 
 ## Todo
 
