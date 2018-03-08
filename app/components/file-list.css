@@ -1,0 +1,20 @@
+.go-back {
+    margin-bottom: 5px;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.info {
+    font-size: 50px;
+}
+
+.entry {
+    padding: 10px 5px;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+.entry:hover {
+    background: lightgray;
+}
